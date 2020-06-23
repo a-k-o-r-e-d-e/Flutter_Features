@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Utils/drawer_util.dart';
+
 class BottomSheets extends StatefulWidget {
   @override
   _BottomSheetsState createState() => _BottomSheetsState();
@@ -71,6 +73,7 @@ class _BottomSheetsState extends State<BottomSheets> {
       appBar: AppBar(
         title: Text("Flutter BottomSheet"),
       ),
+      drawer: DrawerUtil(),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Center(

@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterfeaturesapp/bottomsheets.dart';
-import 'package:flutterfeaturesapp/swipe_to_dismiss.dart';
+
+import 'Utils/drawer_util.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,41 +29,7 @@ class HomePage extends StatelessWidget {
         title: Text("Flutter Features"),
         elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-              accountName: Text("Lone Wolf"),
-              accountEmail: Text("korex006@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                backgroundColor:
-                    Theme.of(context).platform == TargetPlatform.iOS
-                        ? Colors.deepPurple
-                        : Colors.white,
-                child: Text("LW"),
-              ),
-            ),
-            ListTile(
-              title: Text("Swipe to Dismiss"),
-              leading: Icon(Icons.arrow_forward),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => SwipeToDismiss()));
-              },
-            ),
-            ListTile(
-              title: Text("BottomSheets"),
-              leading: Icon(Icons.keyboard_arrow_up),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => BottomSheets()));
-              },
-            )
-          ],
-        ),
-      ),
+      drawer: DrawerUtil(),
       body: Center(child: Text("Open Drawer to check diff features")),
     );
   }

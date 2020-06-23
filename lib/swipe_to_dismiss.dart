@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Utils/drawer_util.dart';
+
 class SwipeToDismiss extends StatefulWidget {
   @override
   _SwipeToDismissState createState() => _SwipeToDismissState();
@@ -15,6 +17,7 @@ class _SwipeToDismissState extends State<SwipeToDismiss> {
       appBar: AppBar(
         title: Text("Swipe to Dismiss"),
       ),
+      drawer: DrawerUtil(),
       body: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, int index) {
