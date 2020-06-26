@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
 import '../bottomsheets.dart';
+import '../main.dart';
 import '../swipe_to_dismiss.dart';
 import '../tab_bar_nav.dart';
 
+final bloc = Bloc();
+
 class DrawerUtil extends StatelessWidget {
+  bool darkThemeEnabled;
+
+  DrawerUtil({this.darkThemeEnabled = false});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -20,6 +27,13 @@ class DrawerUtil extends StatelessWidget {
               child: Text("LW"),
             ),
           ),
+          Padding(padding: EdgeInsets.symmetric(vertical: 10.0)),
+          ListTile(
+              title: Text("Dark theme"),
+              trailing: Switch(
+                value: darkThemeEnabled,
+                onChanged: bloc.changeTheme,
+              )),
           ListTile(
             title: Text("Swipe to Dismiss"),
             leading: Icon(Icons.arrow_forward),
