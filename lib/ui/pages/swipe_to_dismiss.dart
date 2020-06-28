@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Utils/drawer_util.dart';
+import '../Utils/drawer_util.dart';
 
 class SwipeToDismiss extends StatefulWidget {
   @override

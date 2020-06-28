@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfeaturesapp/ui/pages/dynamic_theming.dart';
 
-import '../bottomsheets.dart';
-import '../main.dart';
-import '../swipe_to_dismiss.dart';
-import '../tab_bar_nav.dart';
-
-final bloc = Bloc();
+import '../pages/bottomsheets.dart';
+import '../pages/swipe_to_dismiss.dart';
+import '../pages/tab_bar_nav.dart';
 
 class DrawerUtil extends StatelessWidget {
-  bool darkThemeEnabled;
-
-  DrawerUtil({this.darkThemeEnabled = false});
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -29,11 +23,14 @@ class DrawerUtil extends StatelessWidget {
           ),
           Padding(padding: EdgeInsets.symmetric(vertical: 10.0)),
           ListTile(
-              title: Text("Dark theme"),
-              trailing: Switch(
-                value: darkThemeEnabled,
-                onChanged: bloc.changeTheme,
-              )),
+            title: Text("Dynamic Theming"),
+            leading: Icon(Icons.camera),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => PreferencePage()));
+            },
+          ),
           ListTile(
             title: Text("Swipe to Dismiss"),
             leading: Icon(Icons.arrow_forward),

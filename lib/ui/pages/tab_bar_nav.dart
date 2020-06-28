@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Utils/drawer_util.dart';
+import '../Utils/drawer_util.dart';
 
 // Tab navigation layout in app bar with
 class TabBarNav extends StatefulWidget {
