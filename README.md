@@ -2,6 +2,17 @@
 
 A Flutter application that implement different features in flutter as i learn them
 
+** Implemented
+    - Dynamic Theming
+    - Tab Layout
+    - Bottom Sheets
+    - Swipe to dismiss list
+    - Splash Screen (Tested for Android Only)
+
+
+
+** Todo
+    - Hero Animation
 
 A few resources to get you started if this is your first Flutter project:
 
