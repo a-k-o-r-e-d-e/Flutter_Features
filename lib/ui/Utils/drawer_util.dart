@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfeaturesapp/ui/pages/connectivity_test.dart';
 import 'package:flutterfeaturesapp/ui/pages/dynamic_theming.dart';
 
 import '../pages/bottomsheets.dart';
@@ -50,14 +51,23 @@ class DrawerUtil extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text("TabBar Navigation"),
+            title: Text("TabBar Layout"),
             leading: Icon(Icons.table_chart),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => TabBarNav()));
+                  builder: (BuildContext context) => TabBarLayout()));
             },
-          )
+          ),
+          ListTile(
+            title: Text("Connectivity Test"),
+            leading: Icon(Icons.network_check),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => ConnectivityTest()));
+            },
+          ),
         ],
       ),
     );

@@ -28,6 +28,8 @@ dependencies:
   hydrated_bloc: ^4.1.1
   equatable: ^0.4.0
   enum_to_string: ^1.0.9
+  http:
+  connectivity:
 
 
 dev_dependencies:
