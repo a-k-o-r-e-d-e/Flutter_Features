@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfeaturesapp/ui/pages/connectivity_test.dart';
 import 'package:flutterfeaturesapp/ui/pages/dynamic_theming.dart';
+import 'package:flutterfeaturesapp/ui/pages/page_view.dart';
 
 import '../pages/bottomsheets.dart';
 import '../pages/swipe_to_dismiss.dart';
@@ -66,6 +67,15 @@ class DrawerUtil extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => ConnectivityTest()));
+            },
+          ),
+          ListTile(
+            title: Text("PageView Demo"),
+            leading: Icon(Icons.flip),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => PageViewDemo()));
             },
           ),
         ],

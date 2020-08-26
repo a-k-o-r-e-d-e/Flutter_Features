@@ -14,6 +14,10 @@ A Flutter application that implement different features in flutter as i learn th
 
     - Splash Screen (Tested for Android Only)
 
+    - Connectivity Test
+
+    - Page View
+
 
 
 ** Todo
