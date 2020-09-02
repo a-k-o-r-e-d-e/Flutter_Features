@@ -6,8 +6,14 @@ class PageViewDemo extends StatefulWidget {
 }
 
 class _PageViewDemoState extends State<PageViewDemo> {
-  PageController _pageController = PageController(initialPage: 0);
   int currentPage = 0;
+  PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: currentPage);
+  }
 
   @override
   Widget build(BuildContext context) {
