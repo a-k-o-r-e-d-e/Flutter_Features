@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfeaturesapp/ui/pages/circular_pan_wheel.dart';
 import 'package:flutterfeaturesapp/ui/pages/connectivity_test.dart';
 import 'package:flutterfeaturesapp/ui/pages/dynamic_theming.dart';
 import 'package:flutterfeaturesapp/ui/pages/page_view.dart';
@@ -76,6 +77,15 @@ class DrawerUtil extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => PageViewDemo()));
+            },
+          ),
+          ListTile(
+            title: Text("Circular Pan Wheel"),
+            leading: Icon(Icons.circle),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => CircularPanWheel()));
             },
           ),
         ],
