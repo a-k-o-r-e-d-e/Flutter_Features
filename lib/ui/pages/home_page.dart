@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfeaturesapp/ui/Utils/drawer_util.dart';
@@ -21,7 +23,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               // Navigate to the PreferencePage
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => PreferencePage(),
+                builder: (context) => DynamicThemingScreen(),
               ));
             },
           )

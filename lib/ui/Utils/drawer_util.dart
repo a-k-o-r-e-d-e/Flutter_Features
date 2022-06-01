@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfeaturesapp/ui/pages/circular_pan_wheel.dart';
-import 'package:flutterfeaturesapp/ui/pages/connectivity_test.dart';
-import 'package:flutterfeaturesapp/ui/pages/dynamic_theming.dart';
-import 'package:flutterfeaturesapp/ui/pages/page_view.dart';
-
-import '../pages/bottomsheets.dart';
-import '../pages/swipe_to_dismiss.dart';
-import '../pages/tab_bar_nav.dart';
+import 'package:flutterfeaturesapp/ui/Utils/route_names.dart';
 
 class DrawerUtil extends StatelessWidget {
   @override
@@ -30,8 +23,7 @@ class DrawerUtil extends StatelessWidget {
             leading: Icon(Icons.camera),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => PreferencePage()));
+              Navigator.pushNamed(context, RouteNames.dynamicThemingScreen);
             },
           ),
           ListTile(
@@ -39,8 +31,7 @@ class DrawerUtil extends StatelessWidget {
             leading: Icon(Icons.arrow_forward),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => SwipeToDismiss()));
+              Navigator.pushNamed(context, RouteNames.swipeToDismissScreen);
             },
           ),
           ListTile(
@@ -48,8 +39,7 @@ class DrawerUtil extends StatelessWidget {
             leading: Icon(Icons.keyboard_arrow_up),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => BottomSheets()));
+              Navigator.pushNamed(context, RouteNames.bottomSheetsScreen);
             },
           ),
           ListTile(
@@ -57,8 +47,7 @@ class DrawerUtil extends StatelessWidget {
             leading: Icon(Icons.table_chart),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => TabBarLayout()));
+              Navigator.pushNamed(context, RouteNames.tabBarLayoutScreen);
             },
           ),
           ListTile(
@@ -66,8 +55,7 @@ class DrawerUtil extends StatelessWidget {
             leading: Icon(Icons.network_check),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => ConnectivityTest()));
+              Navigator.pushNamed(context, RouteNames.connectivityTestScreen);
             },
           ),
           ListTile(
@@ -75,8 +63,7 @@ class DrawerUtil extends StatelessWidget {
             leading: Icon(Icons.flip),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => PageViewDemo()));
+              Navigator.pushNamed(context, RouteNames.pageViewDemoScreen);
             },
           ),
           ListTile(
@@ -84,8 +71,7 @@ class DrawerUtil extends StatelessWidget {
             leading: Icon(Icons.circle),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => CircularPanWheel()));
+              Navigator.pushNamed(context, RouteNames.circularPanWheelScreen);
             },
           ),
         ],

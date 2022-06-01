@@ -4,8 +4,8 @@ import 'package:flutterfeaturesapp/ui/theme/app_themes.dart';
 import 'package:flutterfeaturesapp/ui/theme/bloc/theme_bloc.dart';
 import 'package:flutterfeaturesapp/ui/theme/bloc/theme_event.dart';
 
-class PreferencePage extends StatelessWidget {
-  const PreferencePage({Key? key}) : super(key: key);
+class DynamicThemingScreen extends StatelessWidget {
+  const DynamicThemingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

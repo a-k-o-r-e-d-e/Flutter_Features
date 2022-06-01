@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../Utils/drawer_util.dart';
 
-class BottomSheets extends StatefulWidget {
+class BottomSheetsScreen extends StatefulWidget {
   @override
-  _BottomSheetsState createState() => _BottomSheetsState();
+  _BottomSheetsScreenState createState() => _BottomSheetsScreenState();
 }
 
-class _BottomSheetsState extends State<BottomSheets> {
+class _BottomSheetsScreenState extends State<BottomSheetsScreen> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   VoidCallback? _showPersistBottomSheetCallback;

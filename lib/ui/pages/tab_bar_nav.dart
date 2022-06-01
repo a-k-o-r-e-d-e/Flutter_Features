@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import '../Utils/drawer_util.dart';
 
 // Tab navigation layout in app bar with
-class TabBarLayout extends StatefulWidget {
+class TabBarLayoutScreen extends StatefulWidget {
   @override
-  _TabBarLayoutState createState() => _TabBarLayoutState();
+  _TabBarLayoutScreenState createState() => _TabBarLayoutScreenState();
 }
 
-class _TabBarLayoutState extends State<TabBarLayout>
+class _TabBarLayoutScreenState extends State<TabBarLayoutScreen>
     with SingleTickerProviderStateMixin {
   TabController? _tabController;
 
