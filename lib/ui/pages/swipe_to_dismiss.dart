@@ -26,12 +26,13 @@ class _SwipeToDismissState extends State<SwipeToDismiss> {
               onDismissed: (direction) {
                 setState(() {
                   items.removeAt(index);
-                  Scaffold.of(context)
+                  ScaffoldMessenger.of(context)
                       .showSnackBar(SnackBar(content: Text("Item Dismissed")));
                 });
               },
               background: Container(
                 color: Colors.red,
+                child: Icon(Icons.delete_forever_outlined),
               ),
               child: ListTile(
                 title: Text("${items[index]}"),

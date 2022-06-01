@@ -12,7 +12,10 @@ class ThemeState extends Equatable {
   ThemeState({
     @required this.themeData,
     @required this.appTheme,
-  }) : super([themeData, appTheme]);
+  });
+
+  @override
+  List<Object> get props => [themeData, appTheme];
 }
 
 //class InitialThemeState extends ThemeState {

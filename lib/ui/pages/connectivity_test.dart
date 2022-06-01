@@ -37,8 +37,8 @@ class _ConnectivityTestState extends State<ConnectivityTest> {
   }
 
   Future getData() async {
-    http.Response response =
-        await http.get("https://jsonplaceholder.typicode.com/posts/");
+    http.Response response = await http
+        .get(Uri.parse(("https://jsonplaceholder.typicode.com/posts/")));
     if (response.statusCode == HttpStatus.ok) {
       var result = jsonDecode(response.body);
       return result;
