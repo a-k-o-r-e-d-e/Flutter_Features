@@ -65,6 +65,10 @@ class HomePage extends StatelessWidget {
                 icon: Icons.flip_camera_android_rounded,
                 title: 'Circular Pan Wheel',
                 navigateTo: RouteNames.circularPanWheelScreen),
+            _GridTile(
+                icon: Icons.donut_large,
+                title: 'Custom Progress Indicators',
+                navigateTo: RouteNames.customProgressIndicator)
           ],
         ),
       ),

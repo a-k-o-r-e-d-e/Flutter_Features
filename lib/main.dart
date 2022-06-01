@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterfeaturesapp/ui/Utils/route_names.dart';
 import 'package:flutterfeaturesapp/ui/pages/bottomsheets.dart';
 import 'package:flutterfeaturesapp/ui/pages/connectivity_test.dart';
+import 'package:flutterfeaturesapp/ui/pages/custom-loading-indicators.dart';
 import 'package:flutterfeaturesapp/ui/pages/dynamic_theming.dart';
 import 'package:flutterfeaturesapp/ui/pages/page_view.dart';
 import 'package:flutterfeaturesapp/ui/pages/swipe_to_dismiss.dart';
@@ -39,6 +40,8 @@ class MyApp extends StatelessWidget {
       RouteNames.connectivityTestScreen: (context) => ConnectivityTest(),
       RouteNames.pageViewDemoScreen: (context) => PageViewDemo(),
       RouteNames.circularPanWheelScreen: (context) => BottomSheetsScreen(),
+      RouteNames.customProgressIndicator: (context) =>
+          CustomLoadingIndicatorsScreen(),
     };
   }
 

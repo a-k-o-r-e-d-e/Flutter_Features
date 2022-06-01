@@ -8,4 +8,5 @@ class RouteNames {
   static const String connectivityTestScreen = 'connectivity-test';
   static const String pageViewDemoScreen = 'page-view-demo';
   static const String circularPanWheelScreen = 'circular-pan-wheel';
+  static const String customProgressIndicator = 'custom-progress-indicator';
 }

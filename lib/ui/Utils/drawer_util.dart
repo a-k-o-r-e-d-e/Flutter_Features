@@ -74,6 +74,14 @@ class DrawerUtil extends StatelessWidget {
               Navigator.pushNamed(context, RouteNames.circularPanWheelScreen);
             },
           ),
+          ListTile(
+            title: Text("Custom Progress Indicators"),
+            leading: Icon(Icons.donut_large),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, RouteNames.customProgressIndicator);
+            },
+          )
         ],
       ),
     );
