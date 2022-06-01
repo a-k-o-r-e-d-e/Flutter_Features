@@ -1,10 +1,10 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterfeaturesapp/ui/theme/app_themes.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'ui/pages/home_page.dart';
 import 'ui/theme/bloc/bloc.dart';
@@ -12,13 +12,13 @@ import 'ui/theme/bloc/bloc.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final storage = await HydratedStorage.build(
-      storageDirectory: Directory('./hydrated_storage'));
+      storageDirectory: await getTemporaryDirectory());
   HydratedBlocOverrides.runZoned(
     () => runApp(MyApp()),
     storage: storage,
   );
   // HydratedBloc delegate = await HydratedStorage.build();
-  runApp(MyApp());
+  // runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

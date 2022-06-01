@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
 
 import '../app_themes.dart';
 
@@ -12,7 +11,7 @@ class ThemeChanged extends ThemeEvent {
   final AppTheme theme;
 
   ThemeChanged({
-    @required this.theme,
+    required this.theme,
   }) : super([theme]);
 
   @override

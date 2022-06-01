@@ -29,11 +29,11 @@ class ThemeBloc extends HydratedBloc<ThemeEvent, ThemeState> {
   // }
 
   @override
-  ThemeState fromJson(Map<String, dynamic> json) {
+  ThemeState? fromJson(Map<String, dynamic> json) {
     try {
       return ThemeState(
           themeData: appThemeData[
-              EnumToString.fromString(AppTheme.values, json['theme'])],
+              EnumToString.fromString(AppTheme.values, json['theme'])!],
           appTheme: EnumToString.fromString(AppTheme.values, json['theme']));
     } catch (_) {
       return null;
@@ -41,7 +41,7 @@ class ThemeBloc extends HydratedBloc<ThemeEvent, ThemeState> {
   }
 
   @override
-  Map<String, dynamic> toJson(ThemeState state) {
+  Map<String, dynamic>? toJson(ThemeState state) {
     try {
       return {'theme': EnumToString.convertToString(state.appTheme)};
     } catch (_) {

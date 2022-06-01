@@ -13,8 +13,8 @@ class ConnectivityTest extends StatefulWidget {
 }
 
 class _ConnectivityTestState extends State<ConnectivityTest> {
-  Connectivity _connectivity;
-  StreamSubscription<ConnectivityResult> _connectivitySubscription;
+  late Connectivity _connectivity;
+  late StreamSubscription<ConnectivityResult> _connectivitySubscription;
 
   @override
   void initState() {
@@ -36,13 +36,15 @@ class _ConnectivityTestState extends State<ConnectivityTest> {
     super.dispose();
   }
 
-  Future getData() async {
+  Future<List> getData() async {
     http.Response response = await http
         .get(Uri.parse(("https://jsonplaceholder.typicode.com/posts/")));
     if (response.statusCode == HttpStatus.ok) {
       var result = jsonDecode(response.body);
       return result;
     }
+
+    return [];
   }
 
   @override
@@ -52,11 +54,11 @@ class _ConnectivityTestState extends State<ConnectivityTest> {
         title: Text("Connectivity Test"),
       ),
       drawer: DrawerUtil(),
-      body: FutureBuilder(
+      body: FutureBuilder<List>(
           future: getData(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              var myData = snapshot.data;
+              var myData = snapshot.data!;
               return ListView.builder(
                   itemCount: myData.length,
                   itemBuilder: (context, index) => ListTile(

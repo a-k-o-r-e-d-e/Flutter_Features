@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfeaturesapp/ui/Utils/drawer_util.dart';
 
 class CircularPanWheel extends StatefulWidget {
-  CircularPanWheel({Key key}) : super(key: key);
+  CircularPanWheel({Key? key}) : super(key: key);
 
   @override
   _CircularPanWheelState createState() => _CircularPanWheelState();
@@ -65,7 +65,7 @@ class _CircularPanWheelState extends State<CircularPanWheel> {
               _movement > 0 ? 'Clockwise' : 'Counter-Clockwise',
               style: Theme.of(context)
                   .textTheme
-                  .headline4
+                  .headline4!
                   .copyWith(color: Colors.white),
             ),
             Text(

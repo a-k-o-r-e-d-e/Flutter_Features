@@ -5,7 +5,7 @@ import 'package:flutterfeaturesapp/ui/theme/bloc/theme_bloc.dart';
 import 'package:flutterfeaturesapp/ui/theme/bloc/theme_event.dart';
 
 class PreferencePage extends StatelessWidget {
-  const PreferencePage({Key key}) : super(key: key);
+  const PreferencePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +22,12 @@ class PreferencePage extends StatelessWidget {
             final itemAppTheme = AppTheme.values[index];
             return Card(
               // Style the cards with the to-be-selected theme colors
-              color: appThemeData[itemAppTheme].primaryColor,
+              color: appThemeData[itemAppTheme]!.primaryColor,
               child: ListTile(
                 title: Text(
                   itemAppTheme.toString(),
                   // To show light text with the dark variants...
-                  style: appThemeData[itemAppTheme].textTheme.bodyText1,
+                  style: appThemeData[itemAppTheme]!.textTheme.bodyText1,
                 ),
                 onTap: () {
                   // This will make the Bloc output a new ThemeState,

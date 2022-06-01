@@ -10,7 +10,7 @@ class BottomSheets extends StatefulWidget {
 class _BottomSheetsState extends State<BottomSheets> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  VoidCallback _showPersistBottomSheetCallback;
+  VoidCallback? _showPersistBottomSheetCallback;
 
   @override
   void initState() {
@@ -22,7 +22,7 @@ class _BottomSheetsState extends State<BottomSheets> {
     setState(() {
       _showPersistBottomSheetCallback = null;
     });
-    _scaffoldKey.currentState
+    _scaffoldKey.currentState!
         .showBottomSheet((context) {
           return Container(
             color: Colors.green,
@@ -80,14 +80,14 @@ class _BottomSheetsState extends State<BottomSheets> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              RaisedButton(
+              ElevatedButton(
                 onPressed: _showPersistBottomSheetCallback,
                 child: Text("Persistent"),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10.0),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: _showModalSheet,
                 child: Text("Modal"),
               )

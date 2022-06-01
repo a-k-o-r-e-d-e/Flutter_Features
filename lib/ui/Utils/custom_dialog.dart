@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class CustomDialog extends StatelessWidget {
   final String title, description, buttonText;
-  final Image image;
+  final Image? image;
 
   CustomDialog(
-      {@required this.title,
-      @required this.description,
-      @required this.buttonText,
+      {required this.title,
+      required this.description,
+      required this.buttonText,
       this.image});
 
   @override
@@ -70,7 +70,7 @@ class CustomDialog extends StatelessWidget {
               SizedBox(height: 24.0),
               Align(
                 alignment: Alignment.bottomRight,
-                child: FlatButton(
+                child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },

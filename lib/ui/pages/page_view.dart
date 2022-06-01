@@ -7,7 +7,7 @@ class PageViewDemo extends StatefulWidget {
 
 class _PageViewDemoState extends State<PageViewDemo> {
   int currentPage = 0;
-  PageController _pageController;
+  PageController? _pageController;
 
   @override
   void initState() {
@@ -26,7 +26,7 @@ class _PageViewDemoState extends State<PageViewDemo> {
           IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              _pageController.animateToPage(--currentPage,
+              _pageController!.animateToPage(--currentPage,
                   duration: Duration(milliseconds: 250),
                   curve: Curves.bounceInOut);
             },
@@ -34,7 +34,7 @@ class _PageViewDemoState extends State<PageViewDemo> {
           IconButton(
             icon: Icon(Icons.arrow_forward_ios),
             onPressed: () {
-              _pageController.animateToPage(++currentPage,
+              _pageController!.animateToPage(++currentPage,
                   duration: Duration(milliseconds: 250),
                   curve: Curves.bounceInOut);
             },

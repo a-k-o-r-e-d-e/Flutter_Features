@@ -10,7 +10,7 @@ class TabBarLayout extends StatefulWidget {
 
 class _TabBarLayoutState extends State<TabBarLayout>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
 
   @override
   void initState() {
