@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterfeaturesapp/ui/Utils/route_names.dart';
+import 'package:flutterfeaturesapp/ui/pages/animations_demo/animations_demo.dart';
 import 'package:flutterfeaturesapp/ui/pages/bottomsheets.dart';
 import 'package:flutterfeaturesapp/ui/pages/connectivity_test.dart';
 import 'package:flutterfeaturesapp/ui/pages/custom-loading-indicators.dart';
@@ -33,15 +34,16 @@ class MyApp extends StatelessWidget {
   Map<String, Widget Function(BuildContext)> generateRoutes(
       BuildContext context) {
     return {
-      RouteNames.dynamicThemingScreen: (context) => DynamicThemingScreen(),
-      RouteNames.swipeToDismissScreen: (context) => SwipeToDismiss(),
-      RouteNames.bottomSheetsScreen: (context) => BottomSheetsScreen(),
-      RouteNames.tabBarLayoutScreen: (context) => TabBarLayoutScreen(),
-      RouteNames.connectivityTestScreen: (context) => ConnectivityTest(),
-      RouteNames.pageViewDemoScreen: (context) => PageViewDemo(),
-      RouteNames.circularPanWheelScreen: (context) => BottomSheetsScreen(),
-      RouteNames.customProgressIndicator: (context) =>
+      RouteNames.dynamicThemingScreen: (_) => DynamicThemingScreen(),
+      RouteNames.swipeToDismissScreen: (_) => SwipeToDismiss(),
+      RouteNames.bottomSheetsScreen: (_) => BottomSheetsScreen(),
+      RouteNames.tabBarLayoutScreen: (_) => TabBarLayoutScreen(),
+      RouteNames.connectivityTestScreen: (_) => ConnectivityTest(),
+      RouteNames.pageViewDemoScreen: (_) => PageViewDemo(),
+      RouteNames.circularPanWheelScreen: (_) => BottomSheetsScreen(),
+      RouteNames.customProgressIndicator: (_) =>
           CustomLoadingIndicatorsScreen(),
+      RouteNames.animationsDemo: (context) => AnimationsDemoScreen()
     };
   }
 

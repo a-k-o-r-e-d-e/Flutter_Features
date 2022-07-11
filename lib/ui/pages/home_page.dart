@@ -68,7 +68,11 @@ class HomePage extends StatelessWidget {
             _GridTile(
                 icon: Icons.donut_large,
                 title: 'Custom Progress Indicators',
-                navigateTo: RouteNames.customProgressIndicator)
+                navigateTo: RouteNames.customProgressIndicator),
+            _GridTile(
+                icon: Icons.animation_rounded,
+                title: "Animations Demo",
+                navigateTo: RouteNames.animationsDemo)
           ],
         ),
       ),
