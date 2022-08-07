@@ -5,18 +5,15 @@ A Flutter application that implement different features in flutter as i learn th
 ** Implemented
 
     - Dynamic Theming
-
     - Tab Layout
-
     - Bottom Sheets
-
     - Swipe to dismiss list
-
     - Splash Screen (Tested for Android Only)
-
     - Connectivity Test
-
     - Page View
+    - Circular Pan Wheel
+    - Custom Progress Animations
+    - Neumorphism Animation
 
 
 

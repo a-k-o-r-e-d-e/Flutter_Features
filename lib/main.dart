@@ -8,6 +8,7 @@ import 'package:flutterfeaturesapp/ui/pages/bottomsheets.dart';
 import 'package:flutterfeaturesapp/ui/pages/connectivity_test.dart';
 import 'package:flutterfeaturesapp/ui/pages/custom-loading-indicators.dart';
 import 'package:flutterfeaturesapp/ui/pages/dynamic_theming.dart';
+import 'package:flutterfeaturesapp/ui/pages/neumorphism_animation.dart';
 import 'package:flutterfeaturesapp/ui/pages/page_view.dart';
 import 'package:flutterfeaturesapp/ui/pages/swipe_to_dismiss.dart';
 import 'package:flutterfeaturesapp/ui/pages/tab_bar_nav.dart';
@@ -43,7 +44,8 @@ class MyApp extends StatelessWidget {
       RouteNames.circularPanWheelScreen: (_) => BottomSheetsScreen(),
       RouteNames.customProgressIndicator: (_) =>
           CustomLoadingIndicatorsScreen(),
-      RouteNames.animationsDemo: (context) => AnimationsDemoScreen()
+      RouteNames.animationsDemo: (_) => AnimationsDemoScreen(),
+      RouteNames.neumorphismAnimation: (_) => AnimatedNeumorphism()
     };
   }
 

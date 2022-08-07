@@ -72,7 +72,11 @@ class HomePage extends StatelessWidget {
             _GridTile(
                 icon: Icons.animation_rounded,
                 title: "Animations Demo",
-                navigateTo: RouteNames.animationsDemo)
+                navigateTo: RouteNames.animationsDemo),
+            _GridTile(
+                icon: Icons.animation_rounded,
+                title: "Neumorphism Animation",
+                navigateTo: RouteNames.neumorphismAnimation)
           ],
         ),
       ),

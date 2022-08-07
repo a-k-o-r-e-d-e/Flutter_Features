@@ -10,4 +10,5 @@ class RouteNames {
   static const String circularPanWheelScreen = 'circular-pan-wheel';
   static const String customProgressIndicator = 'custom-progress-indicator';
   static const String animationsDemo = 'animations-demo';
+  static const String neumorphismAnimation = "neumorphism-animation";
 }
